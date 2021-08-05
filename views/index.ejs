@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+    
+    <%- include('./partials/nav.ejs') %>
+
+
+    <div class="order list">
+        <h2>all orders</h2>
+        <% if (orders.length>0) { %>
+          <% orders.forEach(order => { %>
+            <h3 class="phoneno"> <%= order.phoneno %></h3>
+            <p class="mainorder"> <%= JSON.stringify(order) %></p>
+            <p class ="quantity"> <%= ggorders.quantity %></p>
+            
+
+        <%  }) %>
+       <% } else{ %>
+        <p>There are no orders</p>
+
+        <% } %>
+
+    </div>
+
+
+    
+    
+</body>
+</html>

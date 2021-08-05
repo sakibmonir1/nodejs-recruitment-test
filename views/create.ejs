@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+    <div>
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="create-order content">
+        <form action="/orders" method="POST">
+          <label for="phoneno"> contact:</label>
+          <input type="text" id="phone" name="phoneno" required>
+          <label for="mainorder">Order-product:</label>
+          <input type="text" id="mainorder" name="mainorder" required>
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" required>
+          <button>Submit</button>
+        </form>
+      </div>
+
+
+    
+    </div>
+</body>
+</html>
